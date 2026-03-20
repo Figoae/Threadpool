@@ -1,11 +1,11 @@
 # C++ Thread Pool Library 
 A high-performance Thread Pool library built from scratch in C++ using low-level concurrency primitives.
 # Benchmark Results
-'''
+```
  Method     Time   Speedup 
  Sequential 4054ms  1x      
  Parallel   1008ms *4.02x faster* 
-'''
+```
 > 8 tasks across 4 worker threads
 # Features
  Thread-safe task queue using mutex + condition variables
@@ -22,19 +22,19 @@ A high-performance Thread Pool library built from scratch in C++ using low-level
 - Templates — generic task support for any return type
 - RAII — automatic resource cleanup via destructor
 # Project Structure
-'''
+```
 ThreadPool/
 ├── ThreadPool.h      ← class blueprint
 ├── ThreadPool.cpp    ← implementation
 └── main.cpp          ← benchmark demo
-'''
+```
 # How to run
 1. Clone the repository
 2. Open `ThreadPool.sln` in Visual Studio
 3. Build → `Ctrl + F5`
 
 ##  How It Works
-'''
+```
 main.cpp
     │
     ├── creates ThreadPool(4 workers)
@@ -48,7 +48,7 @@ main.cpp
     │   results returned via future.get()
     │
     └── prints benchmark comparison
-'''
+```
 ##  Key Design Decisions
 
 - **workerLoop** fools threads into permanent waiting state
