@@ -50,10 +50,11 @@ main.cpp
     └── prints benchmark comparison
 ```
 ##  Key Design Decisions
-
+```
 - **workerLoop** fools threads into permanent waiting state
   — reusing them instead of expensive create/destroy cycles
 - **condition_variable** eliminates busy-waiting
   — zero CPU usage when queue is empty
 - **atomic counters** for stats
   — lighter than mutex for simple increments
+```
